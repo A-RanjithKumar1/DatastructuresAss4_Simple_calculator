@@ -20,41 +20,41 @@ abstract  class Simplecalci{
     }
 }
 public class Main extends Simplecalci {
-    private  final Logger LOGGER =  Logger.getLogger("InfoLogging");
+    private  final Logger lOGGER =  Logger.getLogger("InfoLogging");
     double s=0;
     String dumy;
      void add(int a,int b){
         setvalue(a,b);
         dumy="The addition value is:- "+(getval1()+getval2());
-        LOGGER.info(dumy);
+        lOGGER.info(dumy);
 }
     void sub(int a,int b){
         setvalue(a,b);
         dumy="The subtraction value is:- "+(getval1()-getval2());
-        LOGGER.info(dumy);
+        lOGGER.info(dumy);
     }
     void div(int a,int b){
         setvalue(a,b);
         dumy="The divison value is:- "+(getval1()/getval2());
-        LOGGER.info(dumy);
+        lOGGER.info(dumy);
     }
     void mul(int a,int b){
         setvalue(a,b);
         dumy="The multiplication value is:- "+(getval1()*getval2());
-        LOGGER.info(dumy);
+        lOGGER.info(dumy);
     }
 
     public static void main(String[] args) {
          Scanner sc=new Scanner(System.in);
-         final Logger LOGGER =  Logger.getLogger("InfoLogging");
-        LOGGER.info("Enter the operand value1 to perform the mathematical operation");
+         final Logger loGGER =  Logger.getLogger("InfoLogging");
+        loGGER.info("Enter the operand value1 to perform the mathematical operation");
         int first=sc.nextInt();
-        LOGGER.info("Enter the operand value2 to perform the mathematical operation");
+        loGGER.info("Enter the operand value2 to perform the mathematical operation");
         int second=sc.nextInt();
         boolean choose=true;
         Simplecalci cal=new Main();
         while(choose){
-        LOGGER.info("Select the below operation to be formed 1.Add 2.subract 3.divide 4.multiply 5.exit");
+        loGGER.info("Select the below operation to be formed 1.Add 2.subract 3.divide 4.multiply 5.exit");
         int op=sc.nextInt();
         if(op==1){
             cal.add(first,second);
